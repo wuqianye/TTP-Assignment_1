@@ -3,9 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TTP Assignment #1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuxzVWGh89GNrC7OU2lPoI1i_AeTBIZhk&callback=initMap&libraries=&v=weekly" defer></script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // Locations
+            const ASPCA = {lat: 40.7802757854036, lng: -73.94560581545346};
+            const HumanSociety = {lat: 40.76646947243045, lng: -73.96412738175555};
+            const MACC = {lat: 40.81108092867973, lng: -73.90236126223257};
+            const BACC = {lat: 40.68727695704634, lng: -73.86390911530381};
+            const SICC = {lat: 40.55385243675712, lng: -74.19487224446551};
+            const BRC = {lat: 40.88172254197175, lng: -73.82133709258012};
+            // The map, centered at center
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: {lat: 40.73592648596225, lng: -73.99050263393143},
+            });
+            // The marker, positioned at ASPCA
+            const marker = new google.maps.Marker({
+                position: ASPCA,
+                map: map,
+                label: {
+                    text: "ASPCA",
+                    color: "white",
+                    fontWeight: "bold"
+                }
+            });
+            // The marker, positioned at Human Society
+            const marker1 = new google.maps.Marker({
+                position: HumanSociety,
+                map: map,
+                label: {
+                    text: "Human Society",
+                    color: "white",
+                    fontWeight: "bold"
+                }
+            });
+            // The marker, positioned at Manhattan ACC
+            const marker2 = new google.maps.Marker({
+                position: MACC,
+                map: map,
+                label: {
+                    text: "Manhattan ACC",
+                    color: "white",
+                    fontWeight: "bold"
+                }
+            });
+            // The marker, positioned at Brooklyn ACC
+            const marker3 = new google.maps.Marker({
+                position: BACC,
+                map: map,
+                label: {
+                    text: "Brooklyn ACC",
+                    color: "white",
+                    fontWeight: "bold"
+                }
+            });
+            // The marker, positioned at Staten Island ACC
+            const marker4 = new google.maps.Marker({
+                position: SICC,
+                map: map,
+                label: {
+                    text: "Staten Island ACC",
+                    color: "white",
+                    fontWeight: "bold"
+                }
+            });
+            // The marker, positioned at Bronx ACC
+            const marker5 = new google.maps.Marker({
+                position: BRC,
+                map: map,
+                label: {
+                    text: "Bronx ACC",
+                    color: "white",
+                    fontWeight: "bold",
+                }
+            });
+        }
+    </script>
 </head>
 <body>
-    
+    <a href="about.html"><button>About</button></a>
+    <h1>Adoption Centers</h1>
+    <ul>
+        <li><strong>ASPCA Adoption Center</strong>: 424 E 92nd St, New York, NY 10128</li>
+        <li><strong>Human Society</strong>: 306 E 59th St, New York, NY 10022</li>
+        <li><strong>Rescue Dogs Rock NYC</strong>: <a href="https://rescuedogsrocknyc.org/">https://rescuedogsrocknyc.org/</a></li>
+        <li><strong>ACC Of NY</strong>C: <a href="https://www.nycacc.org/">https://www.nycacc.org/</a></li>
+        <ul>
+            <li><strong>Manhattan Animal Care Center</strong>: 326 E 110th St, New York, NY 10029</li>
+            <li><strong>Brooklyn Animal Care Center</strong>: 2336 Linden Blvd, Brooklyn, NY 11208</li>
+            <li><strong>Staten Island Care Center</strong>: 3139 Veterans Rd W, Staten Island, NY 10309</li>
+            <li><strong>Bronx Resource Center</strong>: 464 E Fordham Rd, The Bronx, NY 10458</li>
+        </ul>
+    </ul>
+    <!--The div element for the map -->
+    <div id="map"></div>
 </body>
 </html>
