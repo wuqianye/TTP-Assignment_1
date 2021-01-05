@@ -4,11 +4,19 @@ button {
     background-color: lightsteelblue;
     font-size: large;
     border-radius: 4px;
-    border-color: lightsteelblue;
 }
 
 button:hover {
-    background-color: steelblue;
+    background-color: lightgray;
+    
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+strong {
+    font-size: large;
 }
 
 /* Set the size of the div element that contains the map */
